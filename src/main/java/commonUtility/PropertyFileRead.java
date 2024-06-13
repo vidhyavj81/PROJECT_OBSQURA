@@ -8,8 +8,8 @@ public class PropertyFileRead {
 	static String configpath = "\\src\\main\\resources\\PropertyFiles\\config.properties";
 
 	public static void main(String args[]) {
-		//readConfigFile("brandSearch"); 
-		readConfigFile("name"); 
+		readConfigFile("brandSearch"); 
+		//readConfigFile("name"); 
 	}
 public static String readConfigFile(String propertyvalue) {
 
