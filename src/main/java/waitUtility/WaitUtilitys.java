@@ -10,10 +10,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Wait {
+public class WaitUtilitys {
 	WebDriver driver;
 
-	public Wait(WebDriver driver) {
+	public WaitUtilitys(WebDriver driver) {
 		this.driver = driver;
 	}
 
@@ -36,13 +36,13 @@ public class Wait {
 
 	public void presenceOfElementLocated(By driver2, int seconds) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
-		wait.until(ExpectedConditions.presenceOfElementLocated((By) driver2));
+		wait.until(ExpectedConditions.presenceOfElementLocated((By)driver2));
 
 	}
 
-	public void visibilityOfElementLocated(By driver2,int seconds) {
+	public void visibilityOfElementLocated(By driver2, int seconds) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
-		wait.until(ExpectedConditions.visibilityOfElementLocated((By) driver2));
+		wait.until(ExpectedConditions.visibilityOfElementLocated((By)driver2));
 
 	}
 

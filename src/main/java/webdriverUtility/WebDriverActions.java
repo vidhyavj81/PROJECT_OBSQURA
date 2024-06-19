@@ -115,8 +115,8 @@ public class WebDriverActions {
 		objSelect.selectByVisibleText(value);
 	}
 
-	public String getText(WebElement value) {
-		String Value = value.getText();
+	public String getText(WebElement successMessage) {
+		String Value = successMessage.getText();
 		return Value;
 	}
 }

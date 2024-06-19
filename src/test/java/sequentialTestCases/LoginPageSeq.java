@@ -1,4 +1,4 @@
-package projectTestCases;
+	package sequentialTestCases;
 
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -13,7 +13,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 
-public class LoginPage {
+public class LoginPageSeq {
 	POMLogin objPOMLogin;
 	static String url="https://qalegend.com/billing/public/login";
 	static String browser="chrome";
@@ -41,10 +41,7 @@ public class LoginPage {
 		driver=objlogin.driver;
 		objPOMLogin=new POMLogin(driver);
   }
-  @AfterTest
-  public void afterTest() {
-	 driver.close();
-  }
+ 
   }
 
 
