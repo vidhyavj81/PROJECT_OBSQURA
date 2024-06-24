@@ -20,8 +20,6 @@ public class UnitPageSeq {
 	POMLogin objPOMLogin;
 	POMUnit objPOMUnit;
 	SoftAssert softassert=new SoftAssert();
-//	static String url="https://qalegend.com/billing/public/login";
-//	static String browser="chrome";
 	public static WebDriver driver;
 	
 	
@@ -29,10 +27,8 @@ public class UnitPageSeq {
 	public void unitAdd(String name,String shortname) throws Exception {
 		LoginPageSeq objlogin=new LoginPageSeq();
 		objPOMLogin=new POMLogin(objlogin.driver);
-		objPOMUnit=new POMUnit(objlogin.driver);
-		
+		objPOMUnit=new POMUnit(objlogin.driver);		
 		objPOMUnit.unitDetails();
-		//objPOMUnit.addunitDetails("vidya_unit", "vidhya" );
 		String objName=name;
 		String objShortName=shortname;
 		objPOMUnit.addunitDetails(name,shortname);	
@@ -59,11 +55,8 @@ public class UnitPageSeq {
 
   @DataProvider(name="testdata")
   public Object[][]TestDataFeed(){
-	  //Create object array with 2 rows and 2 column-first parameter is row and second is column
 	  Object[][] twitterdata=new Object[1][2];
-	  //Enter data to row 0 column 0
 	  twitterdata[0][0]="vidya_unit";
-	  //Enter data to row 0 column 1
 	  twitterdata[0][1]="vidhya";
 return twitterdata;
 	  }

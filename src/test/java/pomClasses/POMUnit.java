@@ -14,17 +14,19 @@ import waitUtility.WaitUtilitys;
 import webdriverUtility.WebDriverActions;
 
 public class POMUnit {
-//	public static String message="";
 	WebDriverActions objDriverActions;
 	public WebDriver driver;
 	WaitUtilitys objWait;
 	
+	
 	public POMUnit(WebDriver driver)
+	
 	{
 		this.driver=driver;
 		objDriverActions = new WebDriverActions(driver);
 		PageFactory.initElements(driver, this);
 	}
+	
 	
 		@FindBy(xpath="//*[@id=\"tour_step5\"]/ul/li[8]/a/span")
 		public WebElement Units;

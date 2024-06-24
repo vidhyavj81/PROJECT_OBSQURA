@@ -1,4 +1,4 @@
-package projectTestCases;
+package crossBrowser;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import commonUtility.PropertyFileRead;
@@ -8,12 +8,13 @@ import pomClasses.POMUnit;
 import webdriverUtility.Driver;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Wait;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 
-public class UnitPage {
+public class UnitPageCrossBrowser {
 	
 	
 	
@@ -23,7 +24,7 @@ public class UnitPage {
 	
 	
 	static String url="https://qalegend.com/billing/public/login";
-	static String browser="chrome";
+	
 
 	public static WebDriver driver;
 	@Test(priority=1,enabled=true)
@@ -67,10 +68,11 @@ public class UnitPage {
 		
 	}
   @BeforeTest	
-  public void beforeTest()throws InterruptedException {
+  @Parameters({"browser2"})
+  public void beforeTest(String browser2)throws InterruptedException {
 		
 		Driver objUnit=new Driver();
-		objUnit.launchBrowser(url,browser);
+		objUnit.launchBrowser(url,browser2);
 		driver=objUnit.driver;
 		objPOMLogin=new POMLogin(driver);
 		objPOMUnit=new POMUnit(driver);
